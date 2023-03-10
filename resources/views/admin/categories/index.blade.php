@@ -10,14 +10,18 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>Nama</th>
-            <th class="text-center" style="width: 120px;">Aksi</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Last Update</th>
+            <th class="text-center" style="width: 120px;">Actions</th>
           </tr>
         </thead>
         <tbody>
           @foreach ($categories as $category)
             <tr>
+              <td class="align-middle">{{ $category->id }}</td>
               <td class="align-middle">{{ $category->name }}</td>
+              <td class="align-middle">{{ $category->updated_at->diffForHumans() }}</td>
               <td class="text-center py-0 align-middle">
                 <a href="{{ route('admin.categories.edit', $category->id) }}" class="btn btn-default btn-sm" title="Edit">
                   <i class="fas fa-edit"></i>
