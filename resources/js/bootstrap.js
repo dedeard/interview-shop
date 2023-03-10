@@ -1,7 +1,11 @@
-import "bootstrap";
-import "admin-lte";
+import jQuery from "jquery";
 import axios from "axios";
 import Swal from "sweetalert2/dist/sweetalert2";
+
+window.jQuery = window.$ = jQuery;
+
+import "bootstrap";
+import "admin-lte";
 
 window.axios = axios;
 window.Swal = Swal;
