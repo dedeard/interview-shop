@@ -39,6 +39,7 @@
 
   @vite(['resources/js/app.js'])
   {{ $script }}
+  <x-alert />
 </body>
 
 </html>

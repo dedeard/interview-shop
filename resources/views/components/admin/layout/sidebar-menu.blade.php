@@ -8,6 +8,14 @@
               'icon' => 'tachometer-alt',
           ],
       ],
+      [
+          [
+              'name' => 'Categories',
+              'route' => 'admin.categories.index',
+              'is' => 'admin.categories*',
+              'icon' => 'list',
+          ],
+      ],
   ];
   $x = true;
 @endphp

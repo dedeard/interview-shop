@@ -1,5 +1,6 @@
 import jQuery from "jquery";
 import axios from "axios";
+import Alpine from "alpinejs";
 import Swal from "sweetalert2/dist/sweetalert2";
 
 window.jQuery = window.$ = jQuery;
@@ -8,6 +9,7 @@ import "bootstrap";
 import "admin-lte";
 
 window.axios = axios;
+window.Alpine = Alpine;
 window.Swal = Swal;
 
 window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";

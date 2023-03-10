@@ -1,39 +1,63 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+import "./bootstrap";
 
-import './bootstrap';
-import { createApp } from 'vue';
+Alpine.store("deleteConfirm", (accept = null, reject = null, options = {}) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You will delete it permanently.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Yes, Delete it!",
+    cancelButtonText: "No, Cancel",
+    reverseButtons: true,
+    buttonsStyling: false,
+    customClass: {
+      confirmButton: "btn btn-danger",
+      cancelButton: "btn btn-primary",
+    },
+    ...options,
+  }).then(function (result) {
+    if (result.value && typeof accept === "function") {
+      accept();
+    } else if (typeof reject === "function") {
+      reject();
+    }
+  });
+});
 
-/**
- * Next, we will create a fresh Vue application instance. You may then begin
- * registering components with the application instance so they are ready
- * to use in your application's views. An example is included for you.
- */
+window.fire = {
+  success(text, options = {}) {
+    Swal.fire({
+      icon: "success",
+      title: "Sukses",
+      text,
+      ...options,
+    });
+  },
+  error(text, options = {}) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text,
+      ...options,
+    });
+  },
+  info(text, options = {}) {
+    Swal.fire({
+      icon: "info",
+      title: "Info",
+      text,
+      ...options,
+    });
+  },
+  warning(text, options = {}) {
+    Swal.fire({
+      icon: "warning",
+      title: "Warning",
+      text,
+      ...options,
+    });
+  },
+};
 
-const app = createApp({});
-
-import ExampleComponent from './components/ExampleComponent.vue';
-app.component('example-component', ExampleComponent);
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
-//     app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
-// });
-
-/**
- * Finally, we will attach the application instance to a HTML element with
- * an "id" attribute of "app". This element is included with the "auth"
- * scaffolding. Otherwise, you will need to add an element yourself.
- */
-
-app.mount('#app');
+Alpine.store("fire", window.fire);
+Alpine.start();
