@@ -1,34 +1,4 @@
 @php
-  $menu = [
-      [
-          [
-              'name' => 'Dashboard',
-              'route' => 'admin.dashboard',
-              'is' => 'admin.dashboard',
-              'icon' => 'tachometer-alt',
-          ],
-          [
-              'name' => 'Users',
-              'route' => 'admin.users.index',
-              'is' => 'admin.users*',
-              'icon' => 'users',
-          ],
-      ],
-      [
-          [
-              'name' => 'Products',
-              'route' => 'admin.products.index',
-              'is' => 'admin.products*',
-              'icon' => 'suitcase',
-          ],
-          [
-              'name' => 'Categories',
-              'route' => 'admin.categories.index',
-              'is' => 'admin.categories*',
-              'icon' => 'list',
-          ],
-      ],
-  ];
   $x = true;
 @endphp
 
