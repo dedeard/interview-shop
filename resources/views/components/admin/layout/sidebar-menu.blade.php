@@ -7,6 +7,12 @@
               'is' => 'admin.dashboard',
               'icon' => 'tachometer-alt',
           ],
+          [
+              'name' => 'Users',
+              'route' => 'admin.users.index',
+              'is' => 'admin.users*',
+              'icon' => 'users',
+          ],
       ],
       [
           [

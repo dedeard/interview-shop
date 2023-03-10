@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'DashboardController@index')->name('dashboard');
 
+Route::resource('users', 'UsersController')->except(['show']);
+
 Route::resource('categories', 'CategoriesController')->except(['show']);
 
 Route::resource('products', 'ProductsController')->except(['show']);
