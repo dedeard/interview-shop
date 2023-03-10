@@ -12,6 +12,9 @@
           <a class="nav-link" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="{{ route('products.index') }}">Products</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="{{ route('carts') }}">Cart
             @auth
               <livewire:cart-counter :user="Auth::user()" />

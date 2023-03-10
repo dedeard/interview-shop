@@ -16,3 +16,6 @@ Route::get('/orders/{id}', 'OrdersController@show')->name('orders.show');
 Route::post('/orders/{id}/proof', 'OrdersController@updateProof')->name('orders.update.proof');
 Route::get('/orders/{id}/confirm', 'OrdersController@confirmReceived')->name('orders.update.confirm.received');
 Route::delete('/orders/{id}', 'OrdersController@cancelOrder')->name('orders.cancel');
+
+Route::get('/products', 'ProductsController@index')->name('products.index');
+Route::get('/products/{slug}', 'ProductsController@show')->name('products.show');

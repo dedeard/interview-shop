@@ -1,5 +1,5 @@
 <tr x-data>
-  <td><a href="#">{{ $cart->product->name }}</a></td>
+  <td><a href="{{ route('products.show', $cart->product->slug) }}">{{ $cart->product->name }}</a></td>
   <td>Rp.&nbsp;{{ number_format($cart->product->price, 0) }}</td>
   <td><input type="number" wire:model="quantity" min="1"></td>
   <td>Rp.&nbsp;{{ number_format($cart->product->price * $quantity, 0) }}</td>

@@ -7,7 +7,7 @@
         information.</p>
       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Start Shopping Now</a>
+        <a class="btn btn-primary btn-lg" href="{{ route('products.index') }}" role="button">Start Shopping Now</a>
       </p>
     </div>
   </div>
@@ -21,7 +21,7 @@
         @endforeach
       </div>
       <div class="text-center py-3">
-        <a href="#" class="btn btn-primary">Browse All Products</a>
+        <a href="{{ route('products.index') }}" class="btn btn-primary">Browse All Products</a>
       </div>
     </div>
   </section>

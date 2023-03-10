@@ -9,13 +9,14 @@
       </p>
       <p class="mb-0 text-truncate">
         <strong>
-          <a href="#" class="text-secondary">{{ $product->name }}</a>
+          <a href="{{ route('products.show', $product->slug) }}" class="text-secondary">{{ $product->name }}</a>
         </strong>
       </p>
       @if ($product->category)
         <p class="mb-0">
           <small>
-            <a href="#" class="text-secondary">{{ $product->category->name }}</a>
+            <a href="{{ route('products.index', ['category' => $product->category->id]) }}"
+              class="text-secondary">{{ $product->category->name }}</a>
           </small>
         </p>
       @endif
@@ -26,7 +27,7 @@
           <livewire:add-to-cart-toggle :user="Auth::user()" :product="$product" />
         </div>
         <div class="ml-2">
-          <a href="#" class="btn btn-primary">
+          <a href="{{ route('products.show', $product->slug) }}" class="btn btn-primary">
             Detail
           </a>
         </div>
