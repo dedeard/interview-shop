@@ -9,7 +9,7 @@ use Livewire\Component;
 
 class AddToCartToggle extends Component
 {
-    public User $user;
+    public  $user = null;
     public Product $product;
 
     public function onClick()
