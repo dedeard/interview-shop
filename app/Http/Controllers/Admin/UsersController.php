@@ -12,9 +12,13 @@ class UsersController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::orderBy('updated_at', 'desc')->paginate(10);
+        $search = $request->input('search');
+        $query = User::query();
+        if (isset($search)) $query->where('name', 'like', "%$search%");
+        $users = $query->orderBy('updated_at', 'desc')->paginate(10)->appends(['search' => $search]);
+
         return view('admin.users.index', ['users' => $users]);
     }
 

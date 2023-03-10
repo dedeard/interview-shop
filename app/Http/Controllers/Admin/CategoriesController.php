@@ -11,9 +11,13 @@ class CategoriesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::orderBy('updated_at', 'desc')->paginate(10);
+        $search = $request->input('search');
+        $query = Category::query();
+        if (isset($search)) $query->where('name', 'like', "%$search%");
+        $categories = $query->orderBy('updated_at', 'desc')->paginate(10)->appends(['search' => $search]);
+
         return view('admin.categories.index', ['categories' => $categories]);
     }
 
