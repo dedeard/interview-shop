@@ -5,7 +5,7 @@
     <img src="{{ $product->cover_url['small'] }}" class="card-img-top">
     <div class="card-body">
       <p class="h4 text-primary">
-        Rp {{ number_format($product->price, 0) }}
+        Rp. {{ number_format($product->price, 0) }}
       </p>
       <p class="mb-0 text-truncate">
         <strong>

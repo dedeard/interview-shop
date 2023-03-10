@@ -29,7 +29,7 @@
           <span>Total</span>
           <span>Rp {{ number_format($total, 0) }}</span>
         </div>
-        <a href="#" class="btn btn-primary btn-block mt-3">Checkout</a>
+        <a href="{{ route('checkout') }}" class="btn btn-primary btn-block mt-3">Checkout</a>
       </div>
     </div>
   </div>
