@@ -16,6 +16,7 @@
   <title>{{ $title }}</title>
   <meta name="description" content="{{ $description }}" />
 
+  @livewireStyles
   @vite(['resources/sass/app.scss'])
   {!! $head !!}
 </head>
@@ -28,6 +29,7 @@
   <x-layout.footer />
 
   @vite(['resources/js/app.js'])
+  @livewireScripts
   {{ $script }}
   <x-alert />
 </body>

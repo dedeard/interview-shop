@@ -9,10 +9,14 @@
     <nav class="navbar-collapse" x-bind:class="{ collapse: navCollapse }">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cart</a>
+          <a class="nav-link" href="{{ route('carts') }}">Cart
+            @auth
+              <livewire:cart-counter :user="Auth::user()" />
+            @endauth
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Transaction</a>

@@ -23,9 +23,7 @@
     <div class="card-footer">
       <div class="d-flex justify-content-between">
         <div class="col px-0">
-          <button class="btn btn-outline-primary btn-block">
-            Add To Cart
-          </button>
+          <livewire:add-to-cart-toggle :user="Auth::user()" :product="$product" />
         </div>
         <div class="ml-2">
           <a href="#" class="btn btn-primary">
