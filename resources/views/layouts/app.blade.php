@@ -22,7 +22,7 @@
 
 <body class="min-vh-100 d-flex flex-column bg-light">
   <x-layout.header />
-  <main class="py-3">
+  <main class="w-100">
     {{ $slot }}
   </main>
   <x-layout.footer />
