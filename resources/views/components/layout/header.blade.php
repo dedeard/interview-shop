@@ -40,7 +40,7 @@
             </li>
           @endif
           <li class="nav-item">
-            <a class="nav-link" href="#">{{ Auth::user()->name }}</a>
+            <a class="nav-link" href="{{ route('profile.index') }}">{{ Auth::user()->name }}</a>
           </li>
         @endguest
       </ul>

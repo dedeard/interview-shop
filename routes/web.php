@@ -19,3 +19,7 @@ Route::delete('/orders/{id}', 'OrdersController@cancelOrder')->name('orders.canc
 
 Route::get('/products', 'ProductsController@index')->name('products.index');
 Route::get('/products/{slug}', 'ProductsController@show')->name('products.show');
+
+Route::get('/profile', 'ProfileController@index')->name('profile.index');
+Route::put('/profile', 'ProfileController@update')->name('profile.update');
+Route::put('/profile/password', 'ProfileController@updatePassword')->name('profile.update.password');
