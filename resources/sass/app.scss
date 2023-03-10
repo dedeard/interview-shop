@@ -2,25 +2,4 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
 
 @import "sweetalert2/dist/sweetalert2.css";
-@import "admin-lte/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.css";
-@import "admin-lte/plugins/select2/css/select2.css";
-@import "admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.css";
-@import "admin-lte/plugins/summernote/summernote-bs4.css";
-@import "admin-lte/dist/css/adminlte.css";
-
-.c-form-upload {
-    position: relative;
-    p {
-        border-style: dashed !important;
-    }
-    input {
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
-        opacity: 0;
-    }
-}
+@import "boostrap/dist/css/bootstrap.css";

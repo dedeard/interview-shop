@@ -16,7 +16,7 @@
   <title>{{ $title }}</title>
   <meta name="description" content="{{ $description }}" />
 
-  @vite(['resources/sass/app.scss'])
+  @vite(['resources/sass/admin.scss'])
   {!! $head !!}
 </head>
 
@@ -37,7 +37,7 @@
     <x-admin.layout.footer />
   </div>
 
-  @vite(['resources/js/app.js'])
+  @vite(['resources/js/admin.js'])
   {{ $script }}
   <x-alert />
 </body>
