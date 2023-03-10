@@ -10,6 +10,12 @@
       ],
       [
           [
+              'name' => 'Products',
+              'route' => 'admin.products.index',
+              'is' => 'admin.products*',
+              'icon' => 'suitcase',
+          ],
+          [
               'name' => 'Categories',
               'route' => 'admin.categories.index',
               'is' => 'admin.categories*',
