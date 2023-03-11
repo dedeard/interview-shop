@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->dropColumn('slug');
             $table->dropUnique('categories_slug_unique');
+            $table->dropColumn('slug');
         });
     }
 
