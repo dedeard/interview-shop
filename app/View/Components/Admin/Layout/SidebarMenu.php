@@ -14,6 +14,14 @@ class SidebarMenu extends Component
         $this->menu = [
             [
                 [
+                    'name' => 'Go to app',
+                    'route' => 'home',
+                    'is' => 'home',
+                    'icon' => 'home',
+                ],
+            ],
+            [
+                [
                     'name' => 'Dashboard',
                     'route' => 'admin.dashboard',
                     'is' => 'admin.dashboard',
