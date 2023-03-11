@@ -54,6 +54,20 @@ class SidebarMenu extends Component
                     'icon' => 'list',
                 ],
             ],
+            [
+                [
+                    'name' => 'Order Reports',
+                    'route' => 'admin.reports.orders',
+                    'is' => 'admin.reports.orders',
+                    'icon' => 'file-lines',
+                ],
+                [
+                    'name' => 'Product Reports',
+                    'route' => 'admin.reports.products',
+                    'is' => 'admin.reports.products',
+                    'icon' => 'file-lines',
+                ],
+            ]
         ];
     }
 

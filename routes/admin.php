@@ -15,3 +15,6 @@ Route::post('/products/{product}/video', 'ProductsController@updateVideo')->name
 Route::resource('orders', 'OrdersController')->only(['index', 'show', 'destroy']);
 Route::post('orders/{order}/confirm-transaction', 'OrdersController@confirmTransaction')->name('orders.confirm.transaction');
 Route::post('orders/{order}/update-receipt', 'OrdersController@updateReceipt')->name('orders.update.receipt');
+
+Route::get('/reports/orders', 'ReportsController@orders')->name('reports.orders');
+Route::get('/reports/products', 'ReportsController@products')->name('reports.products');
