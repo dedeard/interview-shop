@@ -1,4 +1,4 @@
-<x-app-layout title="Login">
+<x-app-layout title="Register">
   <div class="container py-3">
     <div class="row justify-content-center">
       <div class="col-md-8">

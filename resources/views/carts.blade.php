@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Carts">
 
   <div class="jumbotron text-center">
     <div class="container">

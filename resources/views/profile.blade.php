@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Profile">
 
   <div class="jumbotron text-center">
     <div class="container">
