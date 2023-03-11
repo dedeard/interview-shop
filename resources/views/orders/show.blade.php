@@ -79,7 +79,7 @@
                 <td>
                   @if ($detail->product)
                     <img src="{{ $detail->product->cover_url['small'] }}" class="mr-3" width="50px">
-                    <a href="#">
+                    <a href="{{ route('products.show', $detail->product->slug) }}">
                       {{ $detail->product->name }}
                     </a>
                   @else
