@@ -25,6 +25,12 @@ class SidebarMenu extends Component
                     'is' => 'admin.users*',
                     'icon' => 'users',
                 ],
+                [
+                    'name' => 'Orders',
+                    'route' => 'admin.orders.index',
+                    'is' => 'admin.orders*',
+                    'icon' => 'wallet',
+                ],
             ],
             [
                 [
